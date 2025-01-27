@@ -1,10 +1,13 @@
+import AtendimentoModel from "../models/atendimentoModel";
+const atendimentoModel = new AtendimentoModel();
+
 class AtendimentoController {
-  bucar() {
-    return "Buscando atendimento";
+  async buscar() {
+    return await atendimentoModel.listar();
   }
 
-  criar() {
-    return "Criando atendimento";
+  async criar(data: Date, servico: string, cliente: string, status: string) {
+    return await atendimentoModel.criar(data, servico, cliente, status);
   }
 
   atualizar(id: number) {
