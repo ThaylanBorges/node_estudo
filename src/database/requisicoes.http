@@ -1,0 +1,24 @@
+GET http://localhost:48003/atendimentos
+
+###
+POST http://localhost:48003/atendimentos
+content-type: application/json
+
+{
+    "servico": "Barba",
+    "cliente": "Talles",
+    "status": "ativo" 
+}
+
+###
+PUT http://localhost:48003/atendimentos/1
+content-type: application/json
+
+{
+    "servico": "Cabelo e Barba",
+    "cliente": "Talles",
+    "status": "ativo" 
+}
+
+###
+DELETE http://localhost:48003/atendimentos/2

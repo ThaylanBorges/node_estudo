@@ -1,9 +1,9 @@
 import express from "express";
-import router from "./routes";
+import atendimentoRouter from "./routes/atendimentosRouter";
+
 const app = express();
 app.use(express.json());
-
-router(app);
+app.use("/atendimentos", atendimentoRouter);
 
 const port = 48003;
 app.listen(port, (error) => {
